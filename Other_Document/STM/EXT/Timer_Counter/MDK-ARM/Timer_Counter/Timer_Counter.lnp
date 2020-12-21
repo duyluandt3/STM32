@@ -1,0 +1,25 @@
+--cpu Cortex-M4.fp
+"timer_counter\system_stm32f4xx.o"
+"timer_counter\startup_stm32f407xx.o"
+"timer_counter\stm32f4xx_it.o"
+"timer_counter\main.o"
+"timer_counter\stm32f4xx_hal_msp.o"
+"timer_counter\stm32f4xx_hal_flash_ex.o"
+"timer_counter\stm32f4xx_hal_gpio.o"
+"timer_counter\stm32f4xx_hal_pwr_ex.o"
+"timer_counter\stm32f4xx_hal.o"
+"timer_counter\stm32f4xx_hal_pwr.o"
+"timer_counter\stm32f4xx_hal_dma_ex.o"
+"timer_counter\stm32f4xx_hal_rcc_ex.o"
+"timer_counter\stm32f4xx_hal_flash.o"
+"timer_counter\stm32f4xx_hal_tim.o"
+"timer_counter\stm32f4xx_hal_rcc.o"
+"timer_counter\stm32f4xx_hal_cortex.o"
+"timer_counter\stm32f4xx_hal_tim_ex.o"
+"timer_counter\stm32f4xx_hal_dma.o"
+"timer_counter\stm32f4xx_hal_flash_ramfunc.o"
+--library_type=microlib --strict --scatter "Timer_Counter\Timer_Counter.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Timer_Counter.map" -o Timer_Counter\Timer_Counter.axf
