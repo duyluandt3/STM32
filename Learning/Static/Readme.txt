@@ -1,1 +1,0 @@
-- Biến được khai báo là static thì sau khi ra ngoài funcion, giá trị của biến không bị mất đi.

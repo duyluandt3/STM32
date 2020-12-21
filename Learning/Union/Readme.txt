@@ -1,2 +1,0 @@
-- Size của union sẽ tính theo size của biến có size lớn nhất.
-- Bộ nhớ của các phần tử sẽ là dùng chung với nhau.

@@ -1,2 +1,0 @@
-- Dùng để yêu cầu refresh lại biến khi tối ưu code.
-- Bỏ qua optimize biến được đặt là volatile
