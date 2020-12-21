@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1608533389 source:d:\work\git\stm32\learning\static\prog\static\main.c
+	<stdio.h>
+	<stdlib.h>
+
