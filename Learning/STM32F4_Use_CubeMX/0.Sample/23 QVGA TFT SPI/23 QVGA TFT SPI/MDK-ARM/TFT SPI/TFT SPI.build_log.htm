@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.13.0.0
+Copyright (C) 2014 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: bibi duylu, uneti, LIC=D0DRA-1R03F-KMJ9D-8Y7L3-8EHBZ-G3HWB
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.13.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.13.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\duylu\Desktop\STM32F4\0.Sample\23 QVGA TFT SPI\23 QVGA TFT SPI\MDK-ARM\TFT SPI.uvprojx
+Project File Date:  07/25/2016
+
+<h2>Output:</h2>
+Build target 'TFT SPI'
+compiling main.c...
+../Src/main.c(42): warning:  #223-D: function "sd_init" declared implicitly
+                stt=sd_init();
+../Src/main.c(44): error:  #20: identifier "SD_STT_OK" is undefined
+        while(stt!=SD_STT_OK);
+../Src/main.c(51): warning:  #223-D: function "sd_write_block" declared implicitly
+                stt=sd_write_block(0,send_data);
+../Src/main.c(52): error:  #20: identifier "SD_STT_OK" is undefined
+        }while(stt!=SD_STT_OK);
+../Src/main.c(56): warning:  #223-D: function "sd_read_block" declared implicitly
+                stt=sd_read_block(0,receive_data);
+../Src/main.c(58): error:  #20: identifier "SD_STT_OK" is undefined
+        while(stt!=SD_STT_OK);
+../Src/main.c: 3 warnings, 3 errors
+"TFT SPI\TFT SPI.axf" - 3 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM::CMSIS:CORE:5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\duylu\Desktop\STM32F4\0.Sample\23 QVGA TFT SPI\23 QVGA TFT SPI\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Target not created.
+</pre>
+</body>
+</html>

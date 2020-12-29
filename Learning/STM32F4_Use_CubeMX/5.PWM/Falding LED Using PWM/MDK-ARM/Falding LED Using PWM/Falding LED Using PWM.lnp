@@ -1,0 +1,25 @@
+--cpu Cortex-M4.fp
+"falding led using pwm\system_stm32f4xx.o"
+"falding led using pwm\stm32f4xx_hal_dma_ex.o"
+"falding led using pwm\stm32f4xx_hal_flash_ex.o"
+"falding led using pwm\stm32f4xx_hal_gpio.o"
+"falding led using pwm\stm32f4xx_hal_pwr.o"
+"falding led using pwm\stm32f4xx_hal_tim.o"
+"falding led using pwm\stm32f4xx_hal_flash.o"
+"falding led using pwm\stm32f4xx_hal_flash_ramfunc.o"
+"falding led using pwm\stm32f4xx_hal_tim_ex.o"
+"falding led using pwm\stm32f4xx_hal_rcc_ex.o"
+"falding led using pwm\stm32f4xx_hal.o"
+"falding led using pwm\stm32f4xx_hal_cortex.o"
+"falding led using pwm\stm32f4xx_hal_rcc.o"
+"falding led using pwm\stm32f4xx_hal_dma.o"
+"falding led using pwm\stm32f4xx_hal_pwr_ex.o"
+"falding led using pwm\startup_stm32f407xx.o"
+"falding led using pwm\stm32f4xx_it.o"
+"falding led using pwm\stm32f4xx_hal_msp.o"
+"falding led using pwm\main.o"
+--library_type=microlib --strict --scatter "Falding LED Using PWM\Falding LED Using PWM.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Falding LED Using PWM.map" -o "Falding LED Using PWM\Falding LED Using PWM.axf"

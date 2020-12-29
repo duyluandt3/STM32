@@ -1,0 +1,25 @@
+--cpu Cortex-M4.fp
+"timer interrupt\system_stm32f4xx.o"
+"timer interrupt\startup_stm32f407xx.o"
+"timer interrupt\stm32f4xx_hal_cortex.o"
+"timer interrupt\stm32f4xx_hal_flash_ex.o"
+"timer interrupt\stm32f4xx_hal_rcc.o"
+"timer interrupt\stm32f4xx_hal_tim.o"
+"timer interrupt\stm32f4xx_hal_rcc_ex.o"
+"timer interrupt\stm32f4xx_hal_pwr.o"
+"timer interrupt\stm32f4xx_hal_flash_ramfunc.o"
+"timer interrupt\stm32f4xx_hal_dma.o"
+"timer interrupt\stm32f4xx_hal_tim_ex.o"
+"timer interrupt\stm32f4xx_hal_pwr_ex.o"
+"timer interrupt\stm32f4xx_hal_gpio.o"
+"timer interrupt\stm32f4xx_hal_flash.o"
+"timer interrupt\stm32f4xx_hal_dma_ex.o"
+"timer interrupt\stm32f4xx_hal.o"
+"timer interrupt\main.o"
+"timer interrupt\stm32f4xx_it.o"
+"timer interrupt\stm32f4xx_hal_msp.o"
+--library_type=microlib --strict --scatter "Timer Interrupt\Timer Interrupt.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Timer Interrupt.map" -o "Timer Interrupt\Timer Interrupt.axf"
