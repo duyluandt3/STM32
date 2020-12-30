@@ -1,0 +1,364 @@
+17:36:33 **** Clean-only build of configuration Debug for project 1.Helloword ****
+make -j4 clean 
+rm -rf *
+ 
+17:36:35 **** Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "1.Helloword.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\GIT\STM32_\Learning\Cortex-M3_M4_Processor\Src\1.Helloword\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1.Helloword.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1.Helloword.elf
+ 
+arm-none-eabi-size   1.Helloword.elf 
+arm-none-eabi-objdump -h -S  1.Helloword.elf  > "1.Helloword.list"
+arm-none-eabi-objcopy  -O binary  1.Helloword.elf  "1.Helloword.bin"
+   text	   data	    bss	    dec	    hex	filename
+    676	      8	   1568	   2252	    8cc	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1.Helloword.bin
+Finished building: 1.Helloword.list
+ 
+ 
+17:40:41 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+    676	      8	   1568	   2252	    8cc	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+17:41:36 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+    676	      8	   1568	   2252	    8cc	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+17:43:23 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:28:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello world");
+  ^~~~~~
+../Src/main.c:28:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:28:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "1.Helloword.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\GIT\STM32_\Learning\Cortex-M3_M4_Processor\Src\1.Helloword\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1.Helloword.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1.Helloword.elf
+ 
+arm-none-eabi-objdump -h -S  1.Helloword.elf  > "1.Helloword.list"
+arm-none-eabi-objcopy  -O binary  1.Helloword.elf  "1.Helloword.bin"
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4880	    108	   1580	   6568	   19a8	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1.Helloword.bin
+Finished building: 1.Helloword.list
+ 
+ 
+18:01:10 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+../Src/main.c: In function 'main':
+../Src/main.c:28:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Hello world\n");
+  ^~~~~~
+../Src/main.c:28:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:28:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "1.Helloword.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\GIT\STM32_\Learning\Cortex-M3_M4_Processor\Src\1.Helloword\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1.Helloword.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1.Helloword.elf
+ 
+arm-none-eabi-objdump -h -S  1.Helloword.elf  > "1.Helloword.list"
+arm-none-eabi-objcopy  -O binary  1.Helloword.elf  "1.Helloword.bin"
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1.Helloword.bin
+Finished building: 1.Helloword.list
+ 
+ 
+18:01:46 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:02:00 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:03:06 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:03:37 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:03:47 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:03:58 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:04:04 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+18:08:39 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:30:22 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:30:22 **** Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:25:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:35:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("In thread mode: before interrupt\n");
+  ^~~~~~
+../Src/main.c:35:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Src/main.c:35:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c: In function 'generate_interrupt':
+../Src/main.c:47:5: error: unknown type name 'unit32_t'; did you mean 'uint32_t'?
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+     ^~~~~~~~
+     uint32_t
+../Src/main.c:47:24: error: 'unint32_t' undeclared (first use in this function); did you mean 'uint32_t'?
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+                        ^~~~~~~~~
+                        uint32_t
+../Src/main.c:47:24: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:47:34: error: expected expression before ')' token
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+                                  ^
+../Src/main.c:48:5: error: unknown type name 'unit32_t'; did you mean 'uint32_t'?
+     unit32_t *pISER0 = (unint32_t*)0xE000E100;
+     ^~~~~~~~
+     uint32_t
+../Src/main.c:48:35: error: expected expression before ')' token
+     unit32_t *pISER0 = (unint32_t*)0xE000E100;
+                                   ^
+../Src/main.c: In function 'RTC_WKUP_IRQHandler':
+../Src/main.c:59:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("In handle mode: ISR\n");
+     ^~~~~~
+../Src/main.c:59:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:31:10 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:31:11 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+../Src/main.c: In function 'generate_interrupt':
+../Src/main.c:48:5: error: unknown type name 'unit32_t'; did you mean 'u_int32_t'?
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+     ^~~~~~~~
+     u_int32_t
+../Src/main.c:48:24: error: 'unint32_t' undeclared (first use in this function); did you mean 'u_int32_t'?
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+                        ^~~~~~~~~
+                        u_int32_t
+../Src/main.c:48:24: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:48:34: error: expected expression before ')' token
+     unit32_t *pSTIR = (unint32_t*)0xE000EF00;
+                                  ^
+../Src/main.c:49:5: error: unknown type name 'unit32_t'; did you mean 'u_int32_t'?
+     unit32_t *pISER0 = (unint32_t*)0xE000E100;
+     ^~~~~~~~
+     u_int32_t
+../Src/main.c:49:35: error: expected expression before ')' token
+     unit32_t *pISER0 = (unint32_t*)0xE000E100;
+                                   ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:31:47 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:31:47 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+../Src/main.c: In function 'generate_interrupt':
+../Src/main.c:48:5: error: unknown type name 'unit32_t'; did you mean 'u_int32_t'?
+     unit32_t *pSTIR = (unit32_t*)0xE000EF00;
+     ^~~~~~~~
+     u_int32_t
+../Src/main.c:48:24: error: 'unit32_t' undeclared (first use in this function); did you mean 'u_int32_t'?
+     unit32_t *pSTIR = (unit32_t*)0xE000EF00;
+                        ^~~~~~~~
+                        u_int32_t
+../Src/main.c:48:24: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:48:33: error: expected expression before ')' token
+     unit32_t *pSTIR = (unit32_t*)0xE000EF00;
+                                 ^
+../Src/main.c:49:15: error: 'pISER0' undeclared (first use in this function); did you mean '__SERR'?
+     unit32_t *pISER0 = (unit32_t*)0xE000E100;
+               ^~~~~~
+               __SERR
+../Src/main.c:49:34: error: expected expression before ')' token
+     unit32_t *pISER0 = (unit32_t*)0xE000E100;
+                                  ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:32:35 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:32:35 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:26:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+arm-none-eabi-gcc -o "Operation_modes.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\GIT\STM32_\Learning\Cortex-M3_M4_Processor\Src\Operation_modes\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Operation_modes.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Operation_modes.elf
+ 
+arm-none-eabi-size   Operation_modes.elf 
+arm-none-eabi-objdump -h -S  Operation_modes.elf  > "Operation_modes.list"
+arm-none-eabi-objcopy  -O binary  Operation_modes.elf  "Operation_modes.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3572	    108	   1580	   5260	   148c	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+Finished building: Operation_modes.bin
+Finished building: Operation_modes.list
+ 
+ 
+21:33:33 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3572	    108	   1580	   5260	   148c	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:38:55 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3572	    108	   1580	   5260	   148c	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:39:34 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3572	    108	   1580	   5260	   148c	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:41:20 **** Incremental Build of configuration Debug for project 1.Helloword ****
+make -j4 all 
+arm-none-eabi-size   1.Helloword.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3476	    108	   1580	   5164	   142c	1.Helloword.elf
+Finished building: default.size.stdout
+ 
+21:41:20 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:11:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+arm-none-eabi-gcc -o "Operation_modes.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\GIT\STM32_\Learning\Cortex-M3_M4_Processor\Src\Operation_modes\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Operation_modes.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Operation_modes.elf
+ 
+arm-none-eabi-objdump -h -S  Operation_modes.elf  > "Operation_modes.list"
+arm-none-eabi-objcopy  -O binary  Operation_modes.elf  "Operation_modes.bin"
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3580	    108	   1580	   5268	   1494	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+Finished building: Operation_modes.bin
+Finished building: Operation_modes.list
+ 
+ 
+21:41:27 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3580	    108	   1580	   5268	   1494	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:42:10 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3580	    108	   1580	   5268	   1494	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:42:23 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3580	    108	   1580	   5268	   1494	Operation_modes.elf
+Finished building: default.size.stdout
+ 
+21:43:26 **** Incremental Build of configuration Debug for project Operation_modes ****
+make -j4 all 
+arm-none-eabi-size   Operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3580	    108	   1580	   5268	   1494	Operation_modes.elf
+Finished building: default.size.stdout
+ 
